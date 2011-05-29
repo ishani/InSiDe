@@ -2,7 +2,7 @@
  * InSiDe ~ tools for mucking about with Jason Rohrer's Sleep Is Death (http://sleepisdeath.net/)
  * 
  * Written by Harry Denholm (Ishani) April 2010
- * http://ishanisv.org/sid/
+ * http://www.ishani.org/
  *
  */
 
