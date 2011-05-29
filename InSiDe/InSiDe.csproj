@@ -1,0 +1,255 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E9C7228F-AF7B-4F69-B052-A78EF839E18D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>InSiDe</RootNamespace>
+    <AssemblyName>InSiDe</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <StartupObject>InSiDe.Program</StartupObject>
+    <ApplicationIcon>Resources\SiDIcon.ico</ApplicationIcon>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>SiD.snk</AssemblyOriginatorKeyFile>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutBox.Designer.cs">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CacheExplorer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CacheExplorer.Designer.cs">
+      <DependentUpon>CacheExplorer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CPImageToObject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CPImageToObject.Designer.cs">
+      <DependentUpon>CPImageToObject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CPImageToRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CPImageToRoom.Designer.cs">
+      <DependentUpon>CPImageToRoom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CPImageToSprite.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CPImageToSprite.Designer.cs">
+      <DependentUpon>CPImageToSprite.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CPImageToTile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CPImageToTile.Designer.cs">
+      <DependentUpon>CPImageToTile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlPanelForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImageImportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImageImportForm.Designer.cs">
+      <DependentUpon>ImageImportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProcessingProgressForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProcessingProgressForm.Designer.cs">
+      <DependentUpon>ProcessingProgressForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InSiDeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InSiDeForm.Designer.cs">
+      <DependentUpon>InSiDeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AboutBox.resx">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CacheExplorer.resx">
+      <DependentUpon>CacheExplorer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CPImageToObject.resx">
+      <DependentUpon>CPImageToObject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CPImageToRoom.resx">
+      <DependentUpon>CPImageToRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CPImageToSprite.resx">
+      <DependentUpon>CPImageToSprite.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CPImageToTile.resx">
+      <DependentUpon>CPImageToTile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImageImportForm.resx">
+      <DependentUpon>ImageImportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProcessingProgressForm.resx">
+      <DependentUpon>ProcessingProgressForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InSiDeForm.resx">
+      <DependentUpon>InSiDeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RenameComponentDialog.resx">
+      <DependentUpon>RenameComponentDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="RenameComponentDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RenameComponentDialog.Designer.cs">
+      <DependentUpon>RenameComponentDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThumbRender.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ImageListView\ImageListView.csproj">
+      <Project>{0C295FB8-C6C6-4A40-9F19-05A43F353A04}</Project>
+      <Name>ImageListView</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SiDcore\SiDcore.csproj">
+      <Project>{E3BD6DD2-AB8B-468C-AE2A-DFE204812FC8}</Project>
+      <Name>SiDcore</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SiDIcon.ico" />
+    <None Include="SiD.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HelpGap.png" />
+    <None Include="Resources\HelpBG.png" />
+    <None Include="Resources\Magnifier.png" />
+    <None Include="Resources\MagnifierZoomIn.png" />
+    <None Include="Resources\Contrast.png" />
+    <Content Include="Resources\PatternBG.bmp" />
+    <Content Include="Resources\LightBg.bmp" />
+    <Content Include="Resources\DarkBg.bmp" />
+    <None Include="Resources\Plate.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
