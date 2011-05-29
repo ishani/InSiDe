@@ -18,7 +18,6 @@ namespace SiDcore
 {
   /**
    * Room is a 13x13 pile of Tiles, making up a background panel for a story
-   *
    */
   [ResourceTypeAttribute("room")]
   public class Room : SiDComponent
@@ -54,6 +53,7 @@ namespace SiDcore
       Bitmap tb = new Bitmap(Constants.RoomSize * Constants.TileSize, Constants.RoomSize * Constants.TileSize, PixelFormat.Format24bppRgb);
       Graphics gfx = Graphics.FromImage(tb);
 
+      // rendering a room is pretty simple; just draw each tile, unscaled, in a grid
       Iterate((Int32 x, Int32 y, ref UID uid) =>
       {
         if (uid != null)

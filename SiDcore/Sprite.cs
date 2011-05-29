@@ -17,8 +17,7 @@ using System.Drawing.Imaging;
 namespace SiDcore
 {
   /**
-   * 
-   *
+   * Sprite is a 16x16 RGBA image that can be gathered into StateObjects for use in scenes in the game
    */
   [ResourceTypeAttribute("sprite")]
   public class Sprite : SiDComponent

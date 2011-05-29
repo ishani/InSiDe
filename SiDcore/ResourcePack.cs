@@ -27,15 +27,18 @@ namespace SiDcore
 
   public class ResourcePack
   {
+    // event handlers
     public event ComponentAddedToPackHandler ComponentAdded;
     public event ComponentRemovedFromPackHandler ComponentRemoved;
     public event PackClearedHandler PackCleared;
 
+    // iterator type
     public delegate void IterateResourcePackDelegate(SiDComponent comp);
 
-
+    // dictionary of instantiable component types, used by the generic loader code
     Dictionary<String, Type> mComponentFactory = new Dictionary<String, Type>(6);
 
+    // simultanious storage of components in various containers; some more optimal for queries by type, name, etc
     List<SiDComponent> mComponents = new List<SiDComponent>(256);
     Dictionary<String, SiDComponent> mComponentsByUID = new Dictionary<String, SiDComponent>(256);
     MultiMap<Type, SiDComponent> mComponentsByType = new MultiMap<Type, SiDComponent>(6, 256);
@@ -43,6 +46,7 @@ namespace SiDcore
 
     public ResourcePack()
     {
+      // in theory we could just reflect on ourself to find all types that inherit from SiDComponent to add to this list
       mComponentFactory.Add(SiDComponent.getResourceTypeName(typeof(Tile)), typeof(Tile));
       mComponentFactory.Add(SiDComponent.getResourceTypeName(typeof(Room)), typeof(Room));
       mComponentFactory.Add(SiDComponent.getResourceTypeName(typeof(Sprite)), typeof(Sprite));
@@ -57,7 +61,7 @@ namespace SiDcore
       }
     }
 
-    // 
+    // reset the pack
     public void Clear()
     {
       mComponents.Clear();
@@ -71,7 +75,6 @@ namespace SiDcore
       GC.Collect();
     }
 
-    //
     public bool Add(SiDComponent component)
     {
       if (component == null)
@@ -96,7 +99,6 @@ namespace SiDcore
       return true;
     }
 
-    //
     public bool Remove(SiDComponent component)
     {
       if (component == null)
@@ -129,7 +131,8 @@ namespace SiDcore
       return dupeComponent;
     }
 
-    //
+    // serialize all components into a stream, then compress and write the result to disk. Operation derived from
+    // the original SiD C source
     public void Save(String filename)
     {
       MemoryStream ms = new MemoryStream(mComponents.Count * 1064);

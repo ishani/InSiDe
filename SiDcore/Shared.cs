@@ -15,6 +15,7 @@ using System.Linq;
 
 namespace SiDcore
 {
+  // Unchangables from the SiD source code
   public static class Constants
   {
     public const String SID_MAGIC_CODE = "SiD1977";
@@ -23,6 +24,7 @@ namespace SiDcore
     public const Int32 RoomSize = 13;      // num tiles per room edge
   }
 
+  // Metadata tag for various types of resource that we know about
   [AttributeUsage(AttributeTargets.Class, AllowMultiple = false)]
   public class ResourceTypeAttribute : Attribute
   {
@@ -57,6 +59,8 @@ namespace SiDcore
     }
   };
 
+  // UIDs in SiD represent a unique resource entity and are formed from the first 6 bytes
+  // of the SHA1 hash of the resource contents.
   public class UID
   {
     public UID(byte[] stream)

@@ -17,7 +17,6 @@ namespace SiDcore
 {
   /**
    * Tile represents a single 16x16 background sprite, used to construct Rooms (Scenes)
-   *
    */
   [ResourceTypeAttribute("tile")]
   public class Tile : SiDComponent

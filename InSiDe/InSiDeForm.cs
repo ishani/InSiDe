@@ -58,6 +58,7 @@ namespace InSiDe
 
     private Bitmap LoadImageAs32ARGB(String filename)
     {
+      // a workaround for loading images, to force everything into a 32b RGBA space
       Bitmap toSlice = new Bitmap(Image.FromFile(filename));
       Bitmap fullBPP = new Bitmap(toSlice.Width, toSlice.Height, System.Drawing.Imaging.PixelFormat.Format32bppArgb);
       using (Graphics gfx = Graphics.FromImage(fullBPP))

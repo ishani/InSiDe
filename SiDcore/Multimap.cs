@@ -5,6 +5,7 @@ using System.Text;
 
 namespace SiDcore
 {
+  // K/V single-to-many container
   public class MultiMap<_Key, _Value>
   {
     internal Dictionary<_Key, List<_Value>> map;
