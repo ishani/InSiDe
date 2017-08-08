@@ -1,7 +1,9 @@
-![InSiDe Logo](http://www.ishani.org/ext/InSiDe-icon.gif) InSiDe
+InSiDe
 ======
 
 A utility for importing artwork from external editors into Jason Rohrer's 2-player storytelling game, [Sleep Is Death](http://sleepisdeath.net/). 
+
+[InSiDe Screenie](https://www.ishani.org/public/images/projects/InSiDe-Tiles.png)
 
 * Import images as backgrounds, sprites or objects with options over slicing and subdivision
 * Assemble and manage resource packs for distributing your SiD work
